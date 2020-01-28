@@ -1,0 +1,87 @@
+{
+  "consumer": {
+    "name": "Customer Status API Consumer"
+  },
+  "provider": {
+    "name": "Customer Status API"
+  },
+  "interactions": [
+    {
+      "description": "a request for all Customers with Status ",
+      "providerState": "there are Customers with Status ",
+      "request": {
+        "method": "get",
+        "path": "/allCustomersStatus",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "name": "Arthur Koenig",
+            "address": "Hier und Da 22",
+            "dateOfBirth": "1950-05-06T00:00:00",
+            "emailAddress": "arthur.koenig@schwertstein.at",
+            "status": "Royal",
+            "financialProducts": [
+              {
+                "name": "Raspberry Pi 4 Model B 4GB",
+                "balance": 64.99,
+                "productCode": "LEIWAND999",
+                "interestRate": 20.0
+              },
+              {
+                "name": "RPI4 Case",
+                "balance": 25.99,
+                "productCode": "EHSICHER123",
+                "interestRate": 30.0
+              },
+              {
+                "name": "Baum im Wald",
+                "balance": 413.2,
+                "productCode": "UMFALLT222",
+                "interestRate": 10.0
+              }
+            ]
+          },
+          {
+            "name": "Merlin Magyerhofer",
+            "address": "Immer wieder nie 45",
+            "dateOfBirth": "1900-11-14T00:00:00",
+            "emailAddress": "merlin.magyer@schwertstein.at",
+            "status": "Gold",
+            "financialProducts": [
+              {
+                "name": "RPI4 Case",
+                "balance": 25.99,
+                "productCode": "EHSICHER123",
+                "interestRate": 30.0
+              }
+            ]
+          },
+          {
+            "name": "Harry Potter",
+            "address": "4 Privet Drive, Little Whinging, Surrey",
+            "dateOfBirth": "1989-07-23T00:00:00",
+            "emailAddress": "harry.potter@wronguniverse.at",
+            "status": "Stone of Wisdom",
+            "financialProducts": [
+
+            ]
+          }
+        ]
+      },
+      "metadata": null
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

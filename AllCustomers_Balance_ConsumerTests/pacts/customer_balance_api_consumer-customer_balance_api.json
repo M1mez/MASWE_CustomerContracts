@@ -1,0 +1,47 @@
+{
+  "consumer": {
+    "name": "Customer Balance API Consumer"
+  },
+  "provider": {
+    "name": "Customer Balance API"
+  },
+  "interactions": [
+    {
+      "description": "a request for all Customers with Balance ",
+      "providerState": "there are Customers with Balance ",
+      "request": {
+        "method": "get",
+        "path": "/allCustomersBalance",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "totalBalance": 504.18,
+            "name": "Arthur Koenig"
+          },
+          {
+            "totalBalance": 25.99,
+            "name": "Merlin Magyerhofer"
+          },
+          {
+            "totalBalance": 0.0,
+            "name": "Harry Potter"
+          }
+        ]
+      },
+      "metadata": null
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

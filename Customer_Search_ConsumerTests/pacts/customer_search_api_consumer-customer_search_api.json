@@ -1,0 +1,60 @@
+{
+  "consumer": {
+    "name": "Customer Search API Consumer"
+  },
+  "provider": {
+    "name": "Customer Search API"
+  },
+  "interactions": [
+    {
+      "description": "a request for Customer with Name and Financial Products ",
+      "providerState": "there is a Customer with Name ",
+      "request": {
+        "method": "get",
+        "path": "/customerSearch",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "name": "Arthur Koenig",
+          "address": "Hier und Da 22",
+          "dateOfBirth": "1950-05-06T00:00:00",
+          "emailAddress": "arthur.koenig@schwertstein.at",
+          "status": "Royal",
+          "financialProducts": [
+            {
+              "name": "Raspberry Pi 4 Model B 4GB",
+              "balance": 64.99,
+              "productCode": "LEIWAND999",
+              "interestRate": 20.0
+            },
+            {
+              "name": "RPI4 Case",
+              "balance": 25.99,
+              "productCode": "EHSICHER123",
+              "interestRate": 30.0
+            },
+            {
+              "name": "Baum im Wald",
+              "balance": 413.2,
+              "productCode": "UMFALLT222",
+              "interestRate": 10.0
+            }
+          ]
+        }
+      },
+      "metadata": null
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
